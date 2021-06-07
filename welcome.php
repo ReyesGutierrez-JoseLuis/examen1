@@ -40,8 +40,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <p>HIGH TECH</p>
         <div class="links">
         <a href="welcome.php">Welcome <i class="fas fa-door-open"></i></a>
-        <a href="logout.php">Logout <i class="fas fa-sign-out-alt"></i></a>
         <a href="reset-password.php">Reset password <i class="fas fa-window-restore"></i></a>
+        <a href="logout.php">Logout <i class="fas fa-sign-out-alt"></i></a>
         </div>
     </div>
 
