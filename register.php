@@ -286,7 +286,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span class="invalid-feedback"><?php echo $telefono_err; ?></span>
             </div>
             <div class="form-group">
-                <label>Direccion</label>
+                <label>Dirección</label>
                 <input type="text" name="direccion" class="form-control <?php echo (!empty($direccion_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $direccion; ?>">
                 <span class="invalid-feedback"><?php echo $direccion_err; ?></span>
             </div>
