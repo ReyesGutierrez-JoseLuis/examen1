@@ -274,7 +274,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label>Nombre</label>
                 <input type="text" name="nombre" class="form-control <?php echo (!empty($nombre_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nombre; ?>">
                 <span class="invalid-feedback"><?php echo $nombre_err; ?></span>
-            </div>
+            </div>  
             <div class="form-group">
                 <label>Apellido</label>
                 <input type="text" name="apellido" class="form-control <?php echo (!empty($apellido_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $apellido; ?>">
