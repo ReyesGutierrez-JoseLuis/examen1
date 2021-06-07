@@ -15,11 +15,36 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta charset="UTF-8">
     <title>Bienvenido</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://kit.fontawesome.com/3ec2760d3c.js" crossorigin="anonymous"></script>
     <style>
         body{ font: 14px sans-serif; text-align: center; }
+        .header {display: flex; justify-content: space-around; height: 80px; width: 100%; background-color: black; top: 0; padding: 0px 40px;}
+        .header .links {padding:30px 40px 0px 0px;}
+        .header .links a {padding-left:20px; color:#fff;}
+        .header p {color:#FFF; padding-top:30px; justify-content: flex-start;}
+        .header img { padding: 0; margin:0; height: 100%; vertical-align:top; -webkit-animation: 3s rotate linear infinite; animation: 3s rotate linear infinite; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%;}
+        @keyframes rotate {from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}}
+        @-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+        to {-webkit-transform: rotate(360deg);}}
+        footer{   background-color: black; position: absolute; bottom: 0; width: 100%; height: 40px; color: white; }
+        footer .social-media { text-align:center; color:#fff; padding-top:10px;}
+        footer .social-media i {font-size:20px; padding-right:15px;}
+        footer .social-media i:hover {color:blue;}
     </style>
 </head>
 <body>
+
+    <div class="header">
+        <img src="img/icon.png" title="TGH">
+        <p>HIGH TECH</p>
+        <div class="links">
+        <a href="welcome.php">Welcome <i class="fas fa-door-open"></i></a>
+        <a href="logout.php">Logout <i class="fas fa-sign-out-alt"></i></a>
+        <a href="reset-password.php">Reset password <i class="fas fa-window-restore"></i></a>
+        </div>
+    </div>
+
     <h1 class="my-5">Hola, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Bienvenido al administrador.</h1>
     
     <p><div><?php echo htmlspecialchars($_SESSION["nombre"]); ?></div>
@@ -89,5 +114,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             echo "</table></div></div></div></div></div>";
         }
         ?>
+    <footer>
+        <div class="social-media">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </footer>
+</body>
 </body>
 </html>
